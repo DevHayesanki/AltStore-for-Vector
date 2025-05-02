@@ -1,0 +1,53 @@
+-- Assume behavior control
+assumeBehaviorControl(20)
+
+-- Function to get the current date in a natural format (without time)
+function get_current_date()
+    -- Get current date as a table
+    local current_time = os.date("*t")
+
+    -- Convert the time into a natural format
+    local month_names = {
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    }
+
+    -- Day suffixes (1st, 2nd, 3rd, 4th, etc.)
+    local day_suffixes = { "st", "nd", "rd", "th" }
+    local day = current_time.day
+    local suffix = day_suffixes[4]  -- Default to "th"
+
+    if day % 10 == 1 and day ~= 11 then
+        suffix = day_suffixes[1]
+    elseif day % 10 == 2 and day ~= 12 then
+        suffix = day_suffixes[2]
+    elseif day % 10 == 3 and day ~= 13 then
+        suffix = day_suffixes[3]
+    end
+
+    -- Format date without the time part
+    local formatted_date = string.format(
+        "%s %d%s, %d",
+        month_names[current_time.month],
+        day,
+        suffix,
+        current_time.year
+    )
+
+    return formatted_date
+end
+
+-- Function to make Vector say the current date
+function say_date()
+    -- Get current date in natural format (without time)
+    local date = get_current_date()
+
+    -- Make Vector say the current date using sayText
+    sayText("The date is: " .. date)
+end
+
+-- Call the function to make Vector say the date
+say_date()
+
+-- Release behavior control at the very end
+releaseBehaviorControl()
