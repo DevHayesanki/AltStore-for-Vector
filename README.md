@@ -1,5 +1,5 @@
 # Welcome to AltStore...
-Altstore for Vector is basicly an app store for Vector commands. All you need is an Anki or DDL Vector (Production or Dev-Unlocked/OSKR), and s Wire-Pod setup.
+Altstore for Vector is basicly an app store for Vector commands. All you need is an Anki or DDL Vector (Production or Dev-Unlocked/OSKR), a Windows PC, and s Wire-Pod setup.
 # Adding a new command
 To add a new command from the AltStore, follow these steps.
 1. Download the .txt file for the command you want to add e.x "joke_teller.txt"
