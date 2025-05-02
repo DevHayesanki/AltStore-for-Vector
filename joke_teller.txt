@@ -1,0 +1,26 @@
+-- Assume behavior control
+assumeBehaviorControl(20)
+
+-- Function to tell a random joke
+function tell_joke()
+    -- List of jokes
+    local jokes = {
+        "Why don’t skeletons fight each other? They don’t have the guts!",
+        "Why did the scarecrow win an award? Because he was outstanding in his field!",
+        "Why don't eggs tell jokes? They'd crack each other up!",
+        "I told my wife she was drawing her eyebrows too high. She looked surprised!",
+        "Why can't you give Elsa a balloon? Because she will let it go!"
+    }
+
+    -- Pick a random joke
+    local random_joke = jokes[math.random(#jokes)]
+
+    -- Make Vector say the joke
+    sayText("Here's a joke: " .. random_joke)
+end
+
+-- Call the function to make Vector tell a joke
+tell_joke()
+
+-- Release behavior control at the very end
+releaseBehaviorControl()
