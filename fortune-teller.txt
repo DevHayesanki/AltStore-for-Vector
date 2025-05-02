@@ -1,0 +1,38 @@
+-- Assume behavior control
+assumeBehaviorControl(20)
+
+-- List of magical answers for the Magic 8-Ball
+local answers = {
+    "Yes, definitely.",
+    "No, it is certain.",
+    "Ask again later.",
+    "I cannot predict that now.",
+    "Most likely.",
+    "Very doubtful.",
+    "Without a doubt!",
+    "Don't count on it.",
+    "Outlook good.",
+    "Cannot be determined at this time."
+}
+
+-- Function to get a random response
+function get_magic_8_ball_answer()
+    -- Generate a random index between 1 and the number of possible answers
+    local index = math.random(1, #answers)
+    return answers[index]
+end
+
+-- Function to make Vector give a direct answer
+function magic_8_ball()
+    -- Get a random answer
+    local answer = get_magic_8_ball_answer()
+
+    -- Make Vector say the magical answer
+    sayText("The answer is: " .. answer)
+end
+
+-- Call the function to make Vector give the answer like a Magic 8-Ball
+magic_8_ball()
+
+-- Release behavior control at the very end
+releaseBehaviorControl()
