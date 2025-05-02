@@ -15,5 +15,5 @@ To add a new command from the AltStore, follow these steps.
 11. Test the new command by saying "Hey Vector! (The phrase you set earlier)"
 12. Enjoy your command! 
 # Copyright and Credits
-Thanks to Jaceroo404 for helping with the project.
+Thanks to Jaceroo404! for helping with the project.
 Copyright (c) 2025-2026 Archivers First LLC
